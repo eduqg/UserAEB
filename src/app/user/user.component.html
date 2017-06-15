@@ -1,0 +1,10 @@
+<div class="main">
+  <h1>List of Users</h1>
+  <div class="addUser">
+    <input placeholder="Add User" class="AddText">
+    <button>Add</button>
+  </div>
+  <ul>
+    <li *ngFor = "let user of myUsers">{{user}}</li>
+  </ul>
+</div>
