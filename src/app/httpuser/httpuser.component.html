@@ -1,7 +1,19 @@
 
 
-<button (click)="onUserGet()">Test Get Request</button>
+<button (click)="onUserGet()">Get all users</button>
 <p>Output: {{getData}}</p>
 
-<button (click)="onUserPost()">Test Post Request</button>
+<button (click)="onUserPost()">Post User</button>
 <p>Output: {{postData}}</p>
+
+<button (click)="onUserGetId()">Getting one user</button>
+<p>Output: {{getOneData}}</p>
+
+<!--
+<div>
+    <label>Insira o Id do usuário: </label>
+    <input [(ngModel)]="user.id" placeholder="id"/>
+    <button (click)="onUserGetId(user.id)">Getting one user</button>
+<p>Output: {{getOneData}}</p>
+</div>
+-->

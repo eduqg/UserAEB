@@ -15,11 +15,16 @@ export class HTTPUserService {
     }
 
     postUserJSON() {
-        /*
-        return this._http.post('http://csf.aeb.gov.br/user', {username:'abc',password:'123',id:30})
+
+        return this._http.post('http://csf.aeb.gov.br/user', {username:'abc',password:'123'})
                   .map((response:Response) => response.json());
 
-        */
+
+    }
+
+    getOneUser() {
+        return this._http.get('http://csf.aeb.gov.br/user/1')
+            .map(resource => resource.json());
     }
 
 

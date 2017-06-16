@@ -10,6 +10,7 @@ export class HttpuserComponent {
 
     getData: string;
     postData: string;
+    getOneData: string;
 
     constructor(private _httpService: HTTPUserService) {
     }
@@ -30,6 +31,16 @@ export class HttpuserComponent {
         this._httpService.postUserJSON()
             .subscribe(
                 data => this.postData = JSON.stringify(data),
+                error => alert(error),
+                () => console.log("Finished")
+
+            );
+    }
+
+    onUserGetId() {
+        this._httpService.getOneUser()
+            .subscribe(
+                data => this.getOneData = JSON.stringify(data),
                 error => alert(error),
                 () => console.log("Finished")
 
