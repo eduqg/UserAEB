@@ -29,8 +29,6 @@
     <input id="newusername" type="string" step="1"/>
     <p>Senha</p>
     <input id="newuserpassword" type="string" step="2"/>
-    <p>ID</p>
-    <input id="newuserid" type="number" step="3" pattern="\d+" />
     <p></p>
     <button (click)="onUserPost()" type="button" class="btn btn-primary">Cadastrar Usuário</button>
     <p>{{postData}}</p>
@@ -38,3 +36,11 @@
 
 <hr class="half-rule"/>
 
+<div class="container">
+    <p>Insira o ID para remover</p>
+    <input id="removeid" type="number" step="1" pattern="\d+" />
+    <p class="padding-bottom"></p>
+    <button (click)="onUserDelete()" type="button" class="btn btn-danger">Remover Usuário</button>
+</div>
+
+<hr class="half-rule"/>

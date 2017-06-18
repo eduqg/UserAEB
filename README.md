@@ -1,28 +1,45 @@
-# Aeb3
+# Projeto Usuários AEB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+Esse projeto consiste em um front-end criado utilizando o framework Angular 4.
 
-## Development server
+## Ferramentas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* No desenvolvimento do projeto foi utilizado o Sistema Operacional Ubuntu 16.04.
+* Angular 4
+* Também foi utilizada um serviço REST, disponível em [http://csf.aeb.gov.br/user](http://csf.aeb.gov.br/user)
 
-## Code scaffolding
+## Instalação e Execução
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+<p align="justify">Para a instalação do Angular 4, siga o tutorial no [quickstart](https://angular.io/guide/quickstart) da página oficial do AngularJS.
 
-## Build
+Em um terminal, clone o repositório:
+```console
+$ git clone https://github.com/eduqg/UserAEB
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Abra a pasta do projeto
+```console
+$ cd UserAEB
+```
+Execute o projeto abrindo em um navegador
+```console
+$ ng serve --open
+```
 
-## Running unit tests
+## Experiência no desenvolvimento
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p align="justify">O desenvolvimento do projeto foi inicialmente um desafio, ainda não tinha experiência com serviços REST. Para o desenvolvimento foi necessário pesquisar em documentações, tutoriais e stack overflow.
 
-## Running end-to-end tests
+<p align="justify">Inicialmente, fiz alguns projetos para entender melhor como o angular funciona. Cheguei a conclusão que angular 4 ainda é um pouco recente, acredito que por isso a comunidade ainda está produzirá mais conteúdos sobre o assunto. Com o tempo percebi que também
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+<p align="justify">Depois, comecei a procurar por referencias sobre REST, métodos de get e post, e achei conteúdos interessantes sobre. Consegui realizar com sucesso os métodos de get de todos os usuários e get de usuários por id.
 
-## Further help
+<p align="justify">Consegui realizar os métodos de post em outros serviços REST, mas não obtive sucesso ao realizar os métodos que inserem os dados no serviço REST da AEB.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<p align="justify">Apesar desse problema, também implementei os outros métodos de put e delete e inseri técnicas de programação como comentários, variáveis significativas entre outros. Também inclui no projeto uma interface responsiva com bootstrap, ao final da wiki é possível ver um print da tela da aplicação.
+
+<p align="justify">No mais, acredito ter dado um grande passo no aprendizado do Angular 4 e seria um prazer continuar aprendendo e evoluindo projetos com essa tecnologia.
+
+## Imagem da aplicação
+
+[![Captura de tela de 2017-06-18 18-33-21.png](https://s30.postimg.org/ife9onhcx/Captura_de_tela_de_2017-06-18_18-33-21.png)](https://postimg.org/image/8i38vl9r1/)

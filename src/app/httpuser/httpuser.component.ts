@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HTTPUserService } from './httpuser.service';
 
+import { User } from './user';
+
 @Component({
   selector: 'app-httpuser',
   templateUrl: './httpuser.component.html',
@@ -12,7 +14,8 @@ export class HttpuserComponent {
     getOneData: string;
 
     users = [];
-    jsonUsers: string;
+
+    user: User;
 
     constructor(private _httpService: HTTPUserService) {
     }
@@ -27,28 +30,29 @@ export class HttpuserComponent {
                 () => console.log("Finished")
 
             );
-
-        this.jsonUsers = JSON.stringify(this.users);
     }
 
-    onUserPost() {
+    //cretes user and post it on server
+    onUserPost(): void {
         var username = (document.getElementById("newusername") as HTMLInputElement).value;
         var password = (document.getElementById("newuserpassword") as HTMLInputElement).value;
-        var id = (document.getElementById("newuserid") as HTMLInputElement).value;
 
-        const newUser = {username,password,id}
-        this.users.push(newUser);
+        //creates new user based on fields
+        const newUser = new User();
+        newUser.username = username;
+        newUser.password = password;
 
-        this._httpService.postUserJSON(this.users)
+        this._httpService.postUserJSON(newUser)
             .subscribe(
-                data => console.log(data),
+                postData => console.log(postData),
                 error => alert(error),
                 () => console.log("Finished")
 
             );
     }
 
-    onUserGetId() {
+    //takes one user
+    onUserGetId(): void {
         this._httpService.getOneUser()
             .subscribe(
                 data => this.getOneData = data,
@@ -57,5 +61,17 @@ export class HttpuserComponent {
 
             );
     }
+
+    //delete one user
+    onUserDelete(): void {
+        this._httpService.deleteOneUser()
+            .subscribe(
+                data => this.getOneData = data,
+                error => alert(error),
+                () => console.log("Finished")
+            );
+    }
+
+
 
 }
