@@ -8,9 +8,11 @@ import { HTTPUserService } from './httpuser.service';
 })
 export class HttpuserComponent {
 
-    getData: string;
     postData: string;
     getOneData: string;
+
+    users = [];
+    jsonUsers: string;
 
     constructor(private _httpService: HTTPUserService) {
     }
@@ -20,17 +22,26 @@ export class HttpuserComponent {
         //When is completed, () calls a function
         this._httpService.getCurrentUsers()
             .subscribe(
-                data => this.getData = JSON.stringify(data),
+                resUserData => this.users = resUserData,
                 error => alert(error),
                 () => console.log("Finished")
 
             );
+
+        this.jsonUsers = JSON.stringify(this.users);
     }
 
     onUserPost() {
-        this._httpService.postUserJSON()
+        const username = "user1";
+        const password = "pass1";
+        const id = 4;
+
+        const newUser = {username,password,id}
+        this.users.push(newUser);
+
+        this._httpService.postUserJSON(this.users)
             .subscribe(
-                data => this.postData = JSON.stringify(data),
+                data => console.log(data),
                 error => alert(error),
                 () => console.log("Finished")
 
@@ -40,7 +51,7 @@ export class HttpuserComponent {
     onUserGetId() {
         this._httpService.getOneUser()
             .subscribe(
-                data => this.getOneData = JSON.stringify(data),
+                data => this.getOneData = data,
                 error => alert(error),
                 () => console.log("Finished")
 
