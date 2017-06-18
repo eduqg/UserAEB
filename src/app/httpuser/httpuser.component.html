@@ -1,25 +1,40 @@
-
-
 <div class="container">
-    <button (click)="onUserGet()" type="button" class="btn btn-default">Listar Usuários</button>
+    <p class="text-muted">Selecione uma opção:</p>
+</div>
+<div class="container">
+    <button (click)="onUserGet()" type="button" class="btn btn-primary">Listar Usuários</button>
     <p class="padding-bottom"></p>
     <ul *ngFor="let user of users" class="list-group">
-        <a href="#" class="list-group-item list-group-item-success">{{user.username}}<span class="badge">Id: {{user.id}}</span> </a>
+        <a href="#" class="list-group-item list-group-item-success">Nome: {{user.username}} | Senha: {{user.password}}<span class="badge">Id: {{user.id}}</span> </a>
     </ul>
 </div>
 
-<div class="container">
-    <button (click)="onUserPost()" type="button" class="btn btn-default">Post User</button>
-    <p>Output: {{postData}}</p>
-</div>
+<hr class="half-rule"/>
 
 <div class="container">
     <p>Insira o ID de um usuário</p>
     <input id="userid" type="number" step="1" pattern="\d+" />
     <p class="padding-bottom"></p>
-    <button (click)="onUserGetId()" type="button" class="btn btn-default">Selecionar Usuário</button>
+    <button (click)="onUserGetId()" type="button" class="btn btn-primary">Selecionar Usuário</button>
     <p class="padding-bottom"></p>
     <div *ngIf="getOneData">
-        <a href="#" class="list-group-item list-group-item-success">{{getOneData.username}}<span class="badge">Id: {{getOneData.id}}</span> </a>
+        <a href="#" class="list-group-item list-group-item-success">Nome: {{getOneData.username}} | Senha: {{getOneData.password}}<span class="badge">Id: {{getOneData.id}}</span> </a>
     </div>
 </div>
+
+<hr class="half-rule"/>
+
+<div class="container">
+    <p>Nome</p>
+    <input id="newusername" type="string" step="1"/>
+    <p>Senha</p>
+    <input id="newuserpassword" type="string" step="2"/>
+    <p>ID</p>
+    <input id="newuserid" type="number" step="3" pattern="\d+" />
+    <p></p>
+    <button (click)="onUserPost()" type="button" class="btn btn-primary">Cadastrar Usuário</button>
+    <p>{{postData}}</p>
+</div>
+
+<hr class="half-rule"/>
+

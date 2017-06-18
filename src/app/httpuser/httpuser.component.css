@@ -1,3 +1,9 @@
+.half-rule {
+    margin-left: 0;
+    text-align: left;
+    width: 50%;
+ }
+
 .selected {
   background-color: #CFD8DC !important;
   color: white;

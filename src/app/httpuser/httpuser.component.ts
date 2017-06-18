@@ -32,9 +32,9 @@ export class HttpuserComponent {
     }
 
     onUserPost() {
-        const username = "user1";
-        const password = "pass1";
-        const id = 4;
+        var username = (document.getElementById("newusername") as HTMLInputElement).value;
+        var password = (document.getElementById("newuserpassword") as HTMLInputElement).value;
+        var id = (document.getElementById("newuserid") as HTMLInputElement).value;
 
         const newUser = {username,password,id}
         this.users.push(newUser);
