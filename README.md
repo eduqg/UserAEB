@@ -30,7 +30,7 @@ $ ng serve --open
 
 <p align="justify">O desenvolvimento do projeto foi inicialmente um desafio, ainda não tinha experiência com serviços REST. Para o desenvolvimento foi necessário pesquisar em documentações, tutoriais e stack overflow.
 
-<p align="justify">Inicialmente, fiz alguns projetos para entender melhor como o angular funciona. Cheguei a conclusão que angular 4 ainda é um pouco recente, acredito que por isso a comunidade ainda está produzirá mais conteúdos sobre o assunto. Com o tempo percebi que também
+<p align="justify">Inicialmente, fiz alguns projetos para entender melhor como o angular funciona. Cheguei a conclusão que angular 4 ainda é um pouco recente, acredito que por isso a comunidade ainda está produzirá mais conteúdos sobre o assunto.
 
 <p align="justify">Depois, comecei a procurar por referencias sobre REST, métodos de get e post, e achei conteúdos interessantes sobre. Consegui realizar com sucesso os métodos de get de todos os usuários e get de usuários por id.
 
